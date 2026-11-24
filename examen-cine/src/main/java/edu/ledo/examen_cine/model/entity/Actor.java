@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity 
@@ -23,5 +24,9 @@ public class Actor {
 
     @Column(name = "nacionalidad", length = 60, nullable = false)
     private String nacionalidad;
+
+
+    @OneToMany(mappedBy = "actor_id",cascade = CascadeType.ALL,orphanRemoval = true)
+    
 
 }

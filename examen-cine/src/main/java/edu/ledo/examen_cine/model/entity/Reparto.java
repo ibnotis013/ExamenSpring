@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity 
@@ -22,8 +23,14 @@ public class Reparto {
     
 
     @Column(name = "salario",precision = 5, scale = 2)
-    private Double salario;
+    private double salario;
 
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="pelicula_id")
     
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="actor_id")
 
 }
