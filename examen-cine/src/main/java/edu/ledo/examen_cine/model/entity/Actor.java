@@ -32,6 +32,18 @@ public class Actor {
     public Actor() {
     }
 
+    
+    
+
+
+    public Actor(String nombre, String nacionalidad, List<Reparto> repartos) {
+        this.nombre = nombre;
+        this.nacionalidad = nacionalidad;
+        this.repartos = repartos;
+    }
+
+
+
     public Long getId() {
         return id;
     }

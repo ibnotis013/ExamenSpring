@@ -24,7 +24,7 @@ public class Reparto {
     @Column(name = "personaje", length = 100, nullable = false)
     private String personaje;
 
-    @Column(name = "salario", precision = 5, scale = 2)
+    @Column(name = "salario")
     private BigDecimal salario;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
@@ -37,6 +37,17 @@ public class Reparto {
 
     public Reparto() {
     }
+
+
+    
+    public Reparto(String personaje, BigDecimal salario, Pelicula pelicula, Actor actor) {
+        this.personaje = personaje;
+        this.salario = salario;
+        this.pelicula = pelicula;
+        this.actor = actor;
+    }
+
+
 
     public Long getId() {
         return id;
