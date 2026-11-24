@@ -76,7 +76,6 @@ public class PeliculaServiceImpl implements IPeliculaService {
     @Override
     @Transactional
     public void eliminar(Long id) {
-        // El reparto se borra en cascada; los actores no
         peliculaRepository.delete(buscarOFallar(id));
     }
 
