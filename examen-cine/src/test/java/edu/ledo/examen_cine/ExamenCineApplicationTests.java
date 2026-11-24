@@ -1,0 +1,13 @@
+package edu.ledo.examen_cine;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class ExamenCineApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
